@@ -1,3 +1,4 @@
+import 'package:first_flutter/ui/my_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -157,6 +158,17 @@ class _LoginState extends State<Login> {
                       ),
                     ],
                   ),
+                  TextButton(
+                    onPressed: () {
+                      _formKey.currentState?.reset();
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return MyAccount();
+                        },
+                      ));
+                    },
+                    child: const Text("View Your Account"),
+                  )
                 ],
               ),
             ],
